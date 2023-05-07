@@ -19,7 +19,7 @@ main {
 }
 .titulo {
   text-align: center;
-  color: black;
+  color: #007ddd;
   margin-top: 30px;
   padding: 20px;
 }
@@ -41,6 +41,10 @@ table {
   justify-content: center;
   display: flex;
   text-align: center;
+}
+th {
+  color: #007ddd;
+  font-size: 25px;
 }
 #dados {
   display: flex;
