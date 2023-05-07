@@ -23,7 +23,6 @@ const recebe = async function () {
       `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${select.value}`
     );
     const twodata = await twoapi.json();
-
     const id = document.querySelector("#id");
     id.innerHTML = "ID do estado: " + twodata.id;
 
@@ -45,7 +44,11 @@ const recebe = async function () {
     );
     const disdata = await disapi.json();
 
+    // para apagar as cidades quando selecionar outra
     const dados = document.querySelector("#dados");
+    dados.innerHTML = "";
+
+    // função para aparecer as cidades de uma so vez
     disdata.forEach((tdbody) => {
       const elements = document.createElement("td");
       elements.innerHTML = `<td>${tdbody.nome} </td>`;
